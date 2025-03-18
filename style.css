@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@ body {
     overflow: hidden;
 }
 
-/* Efecto de lluvia */
+/* Animación de lluvia */
 @keyframes rain-fall {
     to {
         transform: translateY(100vh);
@@ -46,6 +47,7 @@ body {
     opacity: 0.3;
 }
 
+/* Contenedor */
 .container {
     background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
     border-radius: 20px;
@@ -54,8 +56,10 @@ body {
     width: 100%;
     max-width: 600px;
     backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    margin: 0 20px; /* Añadir margen a los lados */
 }
 
+/* Títulos y texto */
 .header h1 {
     font-size: 3rem;
     color: #00fff0; /* Color de texto neón */
@@ -89,12 +93,46 @@ footer p {
     color: #aaa;
 }
 
-footer a {
-    color: #00bcd4;
-    text-decoration: none;
-    transition: all 0.3s;
+/* Media queries para móviles */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 0 15px; /* Márgenes en los lados en pantallas pequeñas */
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .countdown {
+        font-size: 2rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
 }
 
-footer a:hover {
-    color: #ff4db1;
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+        margin: 0 10px; /* Márgenes aún más pequeños para móviles más pequeños */
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .countdown {
+        font-size: 1.8rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
 }
